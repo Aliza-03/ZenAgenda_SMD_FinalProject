@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SMDProj</string>
+
+    <style name="NoUnderlineText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+    </style>
+</resources>

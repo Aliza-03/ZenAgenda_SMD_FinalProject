@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="peachie_lite">#F4EEE5</color>
+    <color name="peachie">#F4DDB8</color>
+    <color name="fern">#495235</color>
+    <color name="brown_sugar">#B77B5C</color>
+    <color name="orange">#D9973C</color>
+    <color name="brown_sugar_highlight">#DBA784</color>
+    <color name="moss_highlight">#BABF8B</color>
+    <color name="orange_highlight">#EFC25C</color>
+    <color name="brown">#915536</color>
+    <color name="orange_dark">#B37216</color>
+    <color name="chestnut">#8F533B</color>
+    <color name="moss">#8E9462</color>
+</resources>
