@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/peachie_lite"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="370dp"
+        android:layout_height="610dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-11dp"
+        android:src="@drawable/transparent_bonsai"
+        tools:ignore="ContentDescription"></ImageView>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/logo"
+        android:id="@+id/logo_"
+        tools:ignore="ContentDescription"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZenAgenda"
+        android:textColor="@color/fern"
+
+        android:textSize="40sp"
+        android:layout_below="@+id/logo_"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp"
+        tools:ignore="HardcodedText"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A product by Zendroid"
+        android:fontFamily="@font/playfair_display"
+        android:textColor="@color/fern"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"></TextView>
+</RelativeLayout>
