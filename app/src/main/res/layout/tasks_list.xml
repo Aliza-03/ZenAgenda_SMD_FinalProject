@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:background="#8F9562"
+        android:id="@+id/firstrl">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButton"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#495235"
+            />
+        <TextView
+            android:id="@+id/chatstv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tasks"
+            android:layout_marginLeft="50dp"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/playfairdisplayregular"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/firstrl"
+        android:background="#FFFFE0"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:id="@+id/firsttaskrl"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_circle_24"
+                android:id="@+id/circle1"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/task1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Assignment 3"
+                android:textSize="23sp"
+                android:layout_toRightOf="@id/circle1"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:layout_centerVertical="true"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_edit_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/secondtaskrl"
+            android:layout_below="@id/firsttaskrl"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_circle_24"
+                android:id="@+id/circle2"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/task2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SE Assignment 3"
+                android:textSize="23sp"
+                android:layout_toRightOf="@id/circle2"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:layout_centerVertical="true"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_edit_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/thirdtaskrl"
+            android:layout_below="@id/secondtaskrl"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_circle_24"
+                android:id="@+id/circle3"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/task3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMD Phase 1"
+                android:textSize="23sp"
+                android:layout_toRightOf="@id/circle3"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_edit_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/fourthtaskrl"
+            android:layout_below="@id/thirdtaskrl"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_circle_24"
+                android:id="@+id/circle4"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/task4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SE Project"
+                android:textSize="23sp"
+                android:layout_toRightOf="@id/circle4"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_edit_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/expandcompletedtasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fourthtaskrl"
+            android:layout_marginTop="20dp"
+            >
+            <ImageButton
+                android:id="@+id/expandbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_expand_more_24"
+                android:layout_marginLeft="22dp"
+                android:background="@android:color/transparent"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:layout_toRightOf="@id/expandbutton"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/expandcompletedtasks"
+            android:id="@+id/firstchatrl"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangleroundedcornersforrecyclerviews2"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#B87B5C"
+            >
+            <ImageView
+                android:id="@+id/tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_task_alt_24"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_toRightOf="@id/tick"
+                android:id="@+id/nametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SE - SRS"
+                android:fontFamily="@font/inter"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                />
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/firstchatrl"
+            android:id="@+id/secondchatrl"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangleroundedcornersforrecyclerviews2"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#B87B5C"
+            >
+            <ImageView
+                android:id="@+id/tick2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_task_alt_24"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_toRightOf="@id/tick2"
+                android:id="@+id/nametv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMD Assignment 2"
+                android:fontFamily="@font/inter"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/secondchatrl"
+            android:id="@+id/thirdchatrl"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangleroundedcornersforrecyclerviews2"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#B87B5C"
+            >
+            <ImageView
+                android:id="@+id/tick3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_task_alt_24"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/tick3"
+                android:id="@+id/nametv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI - Lab Task"
+                android:fontFamily="@font/inter"
+                android:textColor="#000000"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
