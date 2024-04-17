@@ -10,11 +10,6 @@ class CoverPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cover_page)
-        val lg=findViewById<ImageView>(R.id.logo_)
 
-        lg.setOnClickListener {
-            intent= Intent(this,MainActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
