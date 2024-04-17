@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE0"
+    >
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:background="@drawable/baseline_arrow_back_24"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#495235"
+        />
+
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backButton"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rectangleroundedcornersforedittexts"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:hint="Title"
+        android:textColor="#495235"
+        android:textColorHint="#495235"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/noteet"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rectangleroundedcornersforedittexts"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar vestibulum erat, ut venenatis odio feugiat vitae."
+        android:textColorHint="#8F9562"
+        android:textColor="#8F9562"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:textSize="20sp"
+        android:gravity="top"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteet"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_square_24"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image appears here"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#333333"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_box_24"
+            android:id="@+id/addButton"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_delete_24" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
