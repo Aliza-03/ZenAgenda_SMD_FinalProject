@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE0"
+    >
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:background="@drawable/baseline_arrow_back_24"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#495235"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="20dp"
+        android:id="@+id/task"
+        >
+        <ImageButton
+            android:id="@+id/checkcircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_checkcircle_24"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/checkcircle"
+            android:layout_marginTop="20dp"
+            android:text="SMD Phase 1"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/firsttaskrl"
+        android:layout_below="@id/task"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_calendar_month_24"
+            android:id="@+id/circle1"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/task1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add due date"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/circle1"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/task1"
+            android:background="#000000"
+            android:layout_toRightOf="@id/circle1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="28dp"
+
+            >
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondtaskrl"
+        android:layout_below="@id/firsttaskrl"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_notifications_24"
+            android:id="@+id/circle2"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/task2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remind me"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/circle2"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter"
+            android:layout_centerVertical="true"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/task2"
+            android:background="#000000"
+            android:layout_toRightOf="@id/circle2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="28dp"
+            >
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/thirdtaskrl"
+        android:layout_below="@id/secondtaskrl"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_attach_file_24"
+            android:id="@+id/circle3"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/task3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add file"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/circle3"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter"
+            android:layout_centerVertical="true"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/task3"
+            android:background="#000000"
+            android:layout_toRightOf="@id/circle3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="28dp"
+
+            >
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thirdtaskrl"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rectangleroundedcornersforedittexts"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Add note"
+            android:paddingLeft="25dp"
+            android:textColorHint="#808080"
+            android:textColor="#000000"
+            android:paddingRight="80dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
