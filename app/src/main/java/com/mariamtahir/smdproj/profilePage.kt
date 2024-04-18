@@ -20,7 +20,7 @@ class profilePage : AppCompatActivity() {
         val lgout2=findViewById<ImageView>(R.id.arrowBack)
 
         editpfp.setOnClickListener {
-            intent= Intent(this,profileCustomize::class.java)
+            intent= Intent(this,taskslist::class.java)
             startActivity(intent)
         }
 
@@ -30,7 +30,7 @@ class profilePage : AppCompatActivity() {
         }
 
       tasklist.setOnClickListener {
-            intent= Intent(this,tasklist::class.java)
+            intent= Intent(this,taskslist::class.java)
             startActivity(intent)
         }
 
