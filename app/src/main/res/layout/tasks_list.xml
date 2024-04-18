@@ -27,7 +27,7 @@
             android:layout_marginLeft="50dp"
             android:textSize="40sp"
             android:textColor="@color/white"
-            android:fontFamily="@font/playfairdisplayregular"
+            android:fontFamily="@font/playfair_display"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
             />
