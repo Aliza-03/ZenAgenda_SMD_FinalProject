@@ -7,17 +7,20 @@
     tools:context=".PomodoroTimer"
     android:background="@color/peachie_lite"
     >
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bonsai_full"
-        >
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
+
         <ImageView
+            android:id="@+id/prev_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/prev_btn"
-            android:src="@drawable/arrow"
             android:padding="20dp"
+            android:src="@drawable/arrow"
 
 
             ></ImageView>
@@ -27,12 +30,11 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/pomodoro_txt"
             android:layout_centerInParent="true"
-            android:padding="20dp"
             android:fontFamily="@font/playfair_display"
+            android:padding="20dp"
             android:text="Focus Time"
-            android:textSize="50sp"
-
-            ></TextView>
+            android:textColor="@color/fern"
+            android:textSize="50sp"></TextView>
 
         <TextView
             android:id="@+id/pomodoro_txt"
@@ -41,39 +43,38 @@
             android:layout_centerInParent="true"
             android:background="@drawable/mossgreen_box"
             android:padding="25dp"
-            android:text="00:30::00"
+            android:text="00:30:00"
             android:textColor="@color/white"
             android:textSize="50sp"></TextView>
 
         <ImageView
+            android:id="@+id/pause_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/pause"
-            android:id="@+id/pause_btn"
             android:layout_below="@id/pomodoro_txt"
+            android:layout_marginTop="3dp"
             android:layout_toLeftOf="@id/play_btn"
             android:padding="20dp"
-            ></ImageView>
+            android:src="@drawable/pause"></ImageView>
 
         <ImageView
+            android:id="@+id/play_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/play"
-            android:id="@+id/play_btn"
             android:layout_below="@id/pomodoro_txt"
             android:layout_centerHorizontal="true"
             android:padding="20dp"
-            ></ImageView>
+            android:src="@drawable/play"></ImageView>
 
         <ImageView
+            android:id="@+id/restart_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/restart"
-            android:id="@+id/restart_btn"
             android:layout_below="@id/pomodoro_txt"
+            android:layout_marginTop="3dp"
             android:layout_toRightOf="@id/play_btn"
             android:padding="20dp"
-            ></ImageView>
+            android:src="@drawable/restart"></ImageView>
     </RelativeLayout>
 
 
