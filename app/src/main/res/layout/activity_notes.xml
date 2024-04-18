@@ -59,15 +59,14 @@
                     >
 
                     <TextView
+                        android:id="@+id/firstnote"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="1"
                         android:background="@drawable/brown_roundbox"
                         android:padding="10dp"
-                        android:text="Lorem ipsum dolor sit amet,
- consectetur adipiscing
-elit. Sed pulvinar vestibulum erat,
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar vestibulum erat,
 "
                         android:textColor="@color/white"
                         android:textSize="20sp"></TextView>
