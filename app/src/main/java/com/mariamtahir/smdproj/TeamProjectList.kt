@@ -16,7 +16,7 @@ class TeamProjectList : AppCompatActivity() {
         // Set click listener on the button
         chatButton.setOnClickListener {
             // Create an Intent to navigate to the "chats" activity
-            val intent = Intent(this, chats::class.java)
+            val intent = Intent(this, Chats::class.java)
             // Start the "chats" activity
             startActivity(intent)
         }
