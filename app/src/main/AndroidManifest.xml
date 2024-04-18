@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SMDproj"
         tools:targetApi="31">
         <activity
+            android:name=".TeamProjectList"
+            android:exported="false" />
+        <activity
             android:name=".PomodoroTimer"
             android:exported="false" />
         <activity
