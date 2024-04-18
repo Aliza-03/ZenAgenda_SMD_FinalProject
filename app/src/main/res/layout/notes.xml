@@ -25,7 +25,7 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/rectangleroundedcornersforedittexts"
         android:backgroundTint="@android:color/transparent"
-        android:fontFamily="@font/playfairdisplayregular"
+        android:fontFamily="@font/playfair_display"
         android:hint="Title"
         android:textColor="#495235"
         android:textColorHint="#495235"
@@ -45,7 +45,7 @@
         android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar vestibulum erat, ut venenatis odio feugiat vitae."
         android:textColorHint="#8F9562"
         android:textColor="#8F9562"
-        android:fontFamily="@font/playfairdisplayregular"
+        android:fontFamily="@font/playfair_display"
         android:textSize="20sp"
         android:gravity="top"
         />
