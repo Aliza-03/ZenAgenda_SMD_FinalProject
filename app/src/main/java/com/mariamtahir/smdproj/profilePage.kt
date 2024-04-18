@@ -30,7 +30,7 @@ class profilePage : AppCompatActivity() {
         }
 
       tasklist.setOnClickListener {
-            intent= Intent(this,profileCustomize::class.java)
+            intent= Intent(this,tasklist::class.java)
             startActivity(intent)
         }
 
