@@ -16,7 +16,8 @@ class CoverPage : AppCompatActivity() {
         val sign=findViewById<TextView>(R.id.signUp)
 
         lgin.setOnClickListener {
-            intent=Intent(this,profilePage::class.java)
+            intent=Intent(this,
+                ProfilePage::class.java)
             startActivity(intent)
         }
 
