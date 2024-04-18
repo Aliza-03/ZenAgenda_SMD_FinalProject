@@ -16,6 +16,21 @@
             android:name=".AddTask"
             android:exported="false" />
         <activity
+            android:name=".profileCustomize"
+            android:exported="false" />
+        <activity
+            android:name=".resetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".signUp"
+            android:exported="false" />
+        <activity
+            android:name=".taskSearch"
+            android:exported="false" />
+        <activity
+            android:name=".profilePage"
+            android:exported="false" />
+        <activity
             android:name=".TeamSpace"
             android:exported="false" />
         <activity
