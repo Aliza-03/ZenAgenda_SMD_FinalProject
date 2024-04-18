@@ -209,8 +209,8 @@
                 android:layout_width="89dp"
                 android:layout_height="68dp"
                 android:layout_below="@id/cc3"
-                android:layout_centerInParent="true"
 
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="-18dp"
                 android:layout_toRightOf="@id/cc2"
                 android:paddingRight="50dp"

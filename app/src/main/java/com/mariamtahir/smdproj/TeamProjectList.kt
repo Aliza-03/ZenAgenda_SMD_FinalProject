@@ -13,6 +13,14 @@ class TeamProjectList : AppCompatActivity() {
         val chatButton = findViewById<ImageView>(R.id.chat_)
         val home=findViewById<ImageView>(R.id.home_)
         val note=findViewById<ImageView>(R.id.gallery_)
+        val addproj=findViewById<ImageView>(R.id.add_project_btn)
+
+        addproj.setOnClickListener {
+            val intent = Intent(this, AddProjectActivity::class.java)
+
+            startActivity(intent)
+        }
+
 
         proj.setOnClickListener {
             intent= Intent(this,TeamSpace::class.java)

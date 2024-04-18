@@ -16,19 +16,24 @@ class Notes : AppCompatActivity() {
         val chatButton = findViewById<ImageView>(R.id.chat_)
         val note1=findViewById<TextView>(R.id.firstnote)
         val home=findViewById<ImageView>(R.id.home_)
+        val addnote=findViewById<ImageView>(R.id.add_note_btn)
 
 
-        // Set click listener on the button
+        addnote.setOnClickListener {
+            val intent = Intent(this, NotePageactivity::class.java)
+
+            startActivity(intent)
+        }
+
+
         chatButton.setOnClickListener {
-            // Create an Intent to navigate to the "chats" activity
+
             val intent = Intent(this, Chats::class.java)
-            // Start the "chats" activity
             startActivity(intent)
         }
         note1.setOnClickListener {
-            // Create an Intent to navigate to the "chats" activity
             val intent = Intent(this, NotePageactivity::class.java)
-            // Start the "chats" activity
+
             startActivity(intent)
         }
 
