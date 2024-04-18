@@ -13,26 +13,27 @@
         android:background="#8F9562"
         android:id="@+id/firstrl"
         >
+
         <ImageButton
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/backButton"
-            android:background="@drawable/baseline_arrow_back_24"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
+            android:background="@drawable/baseline_arrow_back_24"
             android:backgroundTint="#495235"
 
-            />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
+            android:id="@+id/profileButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/baseline_person_24"
             android:layout_below="@id/backButton"
             android:layout_centerHorizontal="true"
-            android:id="@+id/profileButton"
+            android:background="@drawable/baseline_person_24"
             android:backgroundTint="#495235"
-            />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -116,40 +117,43 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp">
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Message"
                 android:background="@drawable/rectangleroundedcornersforedittexts"
                 android:backgroundTint="#F4DDB8"
+                android:fontFamily="@font/playfair_display"
+                android:hint="Message"
                 android:paddingLeft="20dp"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColorHint="#808080"
-                android:textColor="#000000"
                 android:paddingRight="80dp"
-                android:fontFamily="@font/playfair_display"
-                />
+                android:paddingBottom="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                tools:ignore="TouchTargetSizeCheck" />
+
             <ImageButton
                 android:id="@+id/sendButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_send_24"
                 android:layout_alignParentRight="true"
-                android:background="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="20dp"
-                />
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_send_24"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
             <ImageButton
-                android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_attach_file_24"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@id/sendButton"
                 android:background="@android:color/transparent"
-                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_attach_file_24"
 
-                />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         </RelativeLayout>
 

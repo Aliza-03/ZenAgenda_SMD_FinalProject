@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFE0"
@@ -12,15 +13,16 @@
         android:background="#8F9562"
         android:id="@+id/firstrl"
         >
+
         <ImageButton
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/backButton"
-            android:background="@drawable/baseline_arrow_back_2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
+            android:background="@drawable/arrow"
             android:backgroundTint="#495235"
-            />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -64,9 +66,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/nametv"
             android:layout_marginEnd="15dp"
-            />
+            android:layout_toRightOf="@id/nametv"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -102,14 +104,15 @@
             android:layout_alignBottom="@id/collaboratorstv"
             android:layout_marginBottom="2dp"
             />
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/baseline_add_24_2"
-            android:background="@android:color/transparent"
             android:layout_marginRight="20dp"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_add_24_2"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
     </RelativeLayout>
@@ -132,21 +135,22 @@
             />
 
         <EditText
+            android:id="@+id/statuset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/statustv"
             android:layout_marginEnd="15dp"
-            android:id="@+id/statuset"
-            />
+            android:layout_toRightOf="@id/statustv"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
         <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/baseline_expand_more_24"
-            android:background="@android:color/transparent"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            />
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_expand_more_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
     </RelativeLayout>
 
     <Button

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFE0"
     >
+
     <ImageButton
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/backButton"
-        android:background="@drawable/baseline_arrow_back_24"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
+        android:background="@drawable/baseline_arrow_back_24"
         android:backgroundTint="#495235"
-        />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
     <EditText
@@ -29,7 +31,8 @@
         android:hint="Title"
         android:textColor="#495235"
         android:textColorHint="#495235"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
     <EditText
@@ -76,15 +79,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         >
+
         <ImageButton
+            android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_add_box_24"
-            android:id="@+id/addButton"
-            android:background="@android:color/transparent"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="15dp"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_add_box_24"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/deleteButton"
@@ -96,7 +100,8 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/baseline_delete_24" />
+            android:src="@drawable/baseline_delete_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
     </RelativeLayout>

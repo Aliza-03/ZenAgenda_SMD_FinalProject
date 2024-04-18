@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFE0"
     >
+
     <ImageButton
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/backButton"
-        android:background="@drawable/baseline_arrow_back_24"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
+        android:background="@drawable/baseline_arrow_back_24"
         android:backgroundTint="#495235"
-        />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,16 +22,17 @@
         android:layout_marginTop="20dp"
         android:id="@+id/task"
         >
+
         <ImageButton
             android:id="@+id/checkcircle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/outline_checkcircle_24"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:background="@android:color/transparent"
-            />
+            android:src="@drawable/outline_checkcircle_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,14 +60,14 @@
         >
 
         <ImageButton
+            android:id="@+id/circle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_calendar_month_24"
-            android:id="@+id/circle1"
-            android:background="@android:color/transparent"
-            android:layout_marginLeft="28dp"
             android:layout_centerVertical="true"
-            />
+            android:layout_marginLeft="28dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_calendar_month_24"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/task1"
@@ -106,14 +109,14 @@
         >
 
         <ImageButton
+            android:id="@+id/circle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_notifications_24"
-            android:id="@+id/circle2"
-            android:background="@android:color/transparent"
-            android:layout_marginLeft="28dp"
             android:layout_centerVertical="true"
-            />
+            android:layout_marginLeft="28dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_notifications_24"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/task2"
@@ -149,14 +152,14 @@
         >
 
         <ImageButton
+            android:id="@+id/circle3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_attach_file_24"
-            android:id="@+id/circle3"
-            android:background="@android:color/transparent"
-            android:layout_marginLeft="28dp"
             android:layout_centerVertical="true"
-            />
+            android:layout_marginLeft="28dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_attach_file_24"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/task3"
@@ -199,10 +202,10 @@
             android:backgroundTint="@android:color/transparent"
             android:hint="Add note"
             android:paddingLeft="25dp"
-            android:textColorHint="#808080"
-            android:textColor="#000000"
             android:paddingRight="80dp"
-            />
+            android:textColor="#000000"
+            android:textColorHint="#808080"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
     </RelativeLayout>

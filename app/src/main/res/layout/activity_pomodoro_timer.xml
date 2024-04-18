@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PomodoroTimer"
+    android:background="@color/peachie_lite"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bonsai_full"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prev_btn"
+            android:src="@drawable/arrow"
+            android:padding="20dp"
+
+
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/pomodoro_txt"
+            android:layout_centerInParent="true"
+            android:padding="20dp"
+            android:fontFamily="@font/playfair_display"
+            android:text="Focus Time"
+            android:textSize="50sp"
+
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mossgreen_box"
+            android:text="00:30::00"
+            android:textSize="50sp"
+            android:padding="25dp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:id="@+id/pomodoro_txt"
+            ></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pause"
+            android:id="@+id/pause_btn"
+            android:layout_below="@id/pomodoro_txt"
+            android:layout_toLeftOf="@id/play_btn"
+            android:padding="20dp"
+            ></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play"
+            android:id="@+id/play_btn"
+            android:layout_below="@id/pomodoro_txt"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            ></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restart"
+            android:id="@+id/restart_btn"
+            android:layout_below="@id/pomodoro_txt"
+            android:layout_toRightOf="@id/play_btn"
+            android:padding="20dp"
+            ></ImageView>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
