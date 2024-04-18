@@ -17,7 +17,7 @@ class CoverPage : AppCompatActivity() {
 
         lgin.setOnClickListener {
             intent=Intent(this,
-                ProfilePage::class.java)
+                profilePage::class.java)
             startActivity(intent)
         }
 
