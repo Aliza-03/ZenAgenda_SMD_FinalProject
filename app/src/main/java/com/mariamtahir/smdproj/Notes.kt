@@ -15,6 +15,8 @@ class Notes : AppCompatActivity() {
         // Find the button by its ID
         val chatButton = findViewById<ImageView>(R.id.chat_)
         val note1=findViewById<TextView>(R.id.firstnote)
+        val home=findViewById<ImageView>(R.id.home_)
+
 
         // Set click listener on the button
         chatButton.setOnClickListener {
@@ -29,5 +31,17 @@ class Notes : AppCompatActivity() {
             // Start the "chats" activity
             startActivity(intent)
         }
+
+        chatButton.setOnClickListener {
+            val intent = Intent(this, Chats::class.java)
+            startActivity(intent)
+        }
+
+        home.setOnClickListener {
+            val intent = Intent(this, profilePage::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
