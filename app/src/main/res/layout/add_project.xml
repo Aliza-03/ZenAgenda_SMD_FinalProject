@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/backButton"
-            android:background="@drawable/baseline_arrow_back_24"
+            android:background="@drawable/baseline_arrow_back_2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="#495235"

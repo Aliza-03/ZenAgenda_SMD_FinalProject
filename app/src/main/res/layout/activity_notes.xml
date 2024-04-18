@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/peachie_lite"
+    android:id="@+id/parent"
+    tools:context=".Notes">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes"
+                    android:fontFamily="@font/playfair_display"
+                    android:textSize="50sp"
+                    android:padding="20dp"
+                    ></TextView>
+
+                <ImageView
+                    android:layout_width="43dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/add"></ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="575dp"
+                android:orientation="horizontal"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/brown_roundbox"
+                        android:padding="10dp"
+                        android:text="Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+elit. Sed pulvinar vestibulum erat,
+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/fern_roundbox"
+                        android:padding="10dp"
+                        android:text="Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+ Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/mossgreen_box"
+                        android:padding="10dp"
+                        android:text="Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+
+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/mossgreen_box"
+                        android:padding="10dp"
+                        android:text="Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/orange_roundbox"
+                        android:padding="10dp"
+                        android:text="Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+elit. Sed pulvinar vestibulum erat,
+ut venenatis odio feugiat vitae.
+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/chestnut_roundbox"
+                        android:padding="10dp"
+                        android:text="Lorem ipsum dolor sit amet,
+ consectetur adipiscing
+elit. Sed pulvinar vestibulum erat.
+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/fern"
+        app:layout_constraintBottom_toBottomOf="@id/parent"
+        app:layout_constraintStart_toStartOf="@id/parent"
+        app:layout_constraintEnd_toEndOf="@id/parent"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gallery_"
+            android:src="@drawable/solar_gallery_bold"
+            android:paddingLeft="50dp"
+            android:layout_gravity="center_vertical"
+
+            ></ImageView>
+
+        <ImageView
+            android:id="@+id/home_"
+            android:layout_width="42dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:src="@drawable/home"
+
+            ></ImageView>
+
+        <ImageView
+            android:id="@+id/chat_"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="10dp"
+            android:paddingRight="50dp"
+            android:src="@drawable/ic_baseline_chat"
+
+            ></ImageView>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>
