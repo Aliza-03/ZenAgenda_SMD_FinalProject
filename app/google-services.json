@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497233405133",
+    "project_id": "zenagenda-26a56",
+    "storage_bucket": "zenagenda-26a56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497233405133:android:57b5d31db7a1cc192b7584",
+        "android_client_info": {
+          "package_name": "com.mariamtahir.smdproj"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUAWOlL6Fk_i3LfImVT-Lqc-tYQ8oBRsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
