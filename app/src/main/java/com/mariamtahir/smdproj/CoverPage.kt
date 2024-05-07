@@ -1,6 +1,7 @@
 package com.mariamtahir.smdproj
 
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -79,4 +80,18 @@ class CoverPage : AppCompatActivity() {
             startActivity(intent)
         }
     }
+}
+
+// Helper function to save user ID in SharedPreferences
+fun saveUserIdToSharedPreferences(context: Context, userId: String) {
+    val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+    val editor = sharedPreferences.edit()
+    editor.putString("userId", userId)
+    editor.apply()
+}
+
+// Helper function to retrieve user ID from SharedPreferences
+fun getUserIdFromSharedPreferences(context: Context): String? {
+    val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+    return sharedPreferences.getString("userId", null)
 }
