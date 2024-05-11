@@ -20,9 +20,13 @@ class CoverPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cover_page)
 
+        //firebase auth
         auth = FirebaseAuth.getInstance()
 
+        // Declaration of other variables
 
+
+        //layout initialization variables
         val lgin = findViewById<Button>(R.id.loginButton)
         val sign=findViewById<TextView>(R.id.signUp)
         val forgotpass=findViewById<TextView>(R.id.forgotPassword)
@@ -74,6 +78,11 @@ class CoverPage : AppCompatActivity() {
                     }
                 }
 
+            //getting current user and its respective id
+            val currentUser = auth.currentUser
+            val userID= currentUser?.uid     //user id
+
+            Toast.makeText(this,"$userID",Toast.LENGTH_LONG).show()
         }
 
         sign.setOnClickListener {

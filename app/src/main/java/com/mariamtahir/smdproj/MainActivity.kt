@@ -26,14 +26,20 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
-                    finish() // Close the splash screen activity
+                    finish()
                 }
             }
         }
         splashScreenTimer.start()
+//---------------------------------------------------------------------------------------
 
+
+
+// Declaration of variables from layout
         val textclick=findViewById<TextView>(R.id.textclick)
 
+
+        // ON CLICK LISTENER CODES
         textclick.setOnClickListener {
             intent=Intent(this,CoverPage::class.java)
             startActivity(intent)
