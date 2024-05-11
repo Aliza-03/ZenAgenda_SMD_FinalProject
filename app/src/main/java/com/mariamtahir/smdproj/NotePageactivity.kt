@@ -8,5 +8,5 @@ class NotePageactivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.notes)
     }
-
+    
 }

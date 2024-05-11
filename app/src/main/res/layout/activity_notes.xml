@@ -33,12 +33,15 @@
                     android:padding="20dp"
                     ></TextView>
 
-                <ImageView
+                <ImageButton
                     android:layout_width="43dp"
                     android:layout_height="36dp"
                     android:layout_gravity="center"
                     android:id="@+id/add_note_btn"
-                    android:src="@drawable/add"></ImageView>
+                    android:src="@drawable/add"
+                    android:background="@color/peachie_lite"
+                    />
+
             </LinearLayout>
 
             <LinearLayout

@@ -32,14 +32,16 @@
 
         <activity
             android:name=".ChatPageActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".NotePageactivity"
             android:exported="false" />
 
         <activity
             android:name=".taskslist"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
 
 
         <activity
@@ -86,7 +88,8 @@
 
         <activity
             android:name=".AddProjectActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
