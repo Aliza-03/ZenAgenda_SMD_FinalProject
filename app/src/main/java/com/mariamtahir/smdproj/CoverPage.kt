@@ -73,6 +73,7 @@ class CoverPage : AppCompatActivity() {
                         ).show()
                     }
                 }
+
         }
 
         sign.setOnClickListener {

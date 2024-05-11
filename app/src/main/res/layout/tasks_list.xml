@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/peachie_lite"
 
     >
 
@@ -21,7 +22,10 @@
             android:layout_marginLeft="100dp"
             android:layout_centerInParent="true"
             android:layout_toRightOf="@id/chatstv"
-            android:src="@drawable/add"></ImageView>
+            android:src="@drawable/add">
+
+        </ImageView>
+
         <ImageButton
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
@@ -30,7 +34,8 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/baseline_arrow_back_24"
             android:backgroundTint="#495235"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            />
         <TextView
             android:id="@+id/chatstv"
             android:layout_width="wrap_content"
@@ -45,184 +50,20 @@
             />
 
 
+
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/firstrl"
-        android:background="#FFFFE0"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:id="@+id/firsttaskrl"
-            >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/to_do_rv"
+        ></androidx.recyclerview.widget.RecyclerView>
 
-            <ImageButton
-                android:id="@+id/circle1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/outline_circle_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <TextView
-                android:id="@+id/task1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AI Assignment 3"
-                android:textSize="23sp"
-                android:layout_toRightOf="@id/circle1"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/inter"
-                android:layout_centerVertical="true"
-                />
-
-            <ImageButton
-                android:id="@+id/editbutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/baseline_edit_24"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/secondtaskrl"
-            android:layout_below="@id/firsttaskrl"
-            >
-
-            <ImageButton
-                android:id="@+id/circle2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/outline_circle_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <TextView
-                android:id="@+id/task2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SE Assignment 3"
-                android:textSize="23sp"
-                android:layout_toRightOf="@id/circle2"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/inter"
-                android:layout_centerVertical="true"
-                />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/baseline_edit_24"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/thirdtaskrl"
-            android:layout_below="@id/secondtaskrl"
-            >
-
-            <ImageButton
-                android:id="@+id/circle3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/outline_circle_24"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/task3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SMD Phase 1"
-                android:textSize="23sp"
-                android:layout_toRightOf="@id/circle3"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/inter"
-                android:layout_centerVertical="true"
-                />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/baseline_edit_24"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/fourthtaskrl"
-            android:layout_below="@id/thirdtaskrl"
-            >
-
-            <ImageButton
-                android:id="@+id/circle4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/outline_circle_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <TextView
-                android:id="@+id/task4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SE Project"
-                android:textSize="23sp"
-                android:layout_toRightOf="@id/circle4"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/inter"
-                android:layout_centerVertical="true"
-                />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/baseline_edit_24"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        </RelativeLayout>
         <RelativeLayout
             android:id="@+id/expandcompletedtasks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fourthtaskrl"
+            android:layout_below="@id/to_do_rv"
             android:layout_marginTop="20dp"
             >
 
@@ -351,4 +192,3 @@
 
 
 
-</RelativeLayout>
