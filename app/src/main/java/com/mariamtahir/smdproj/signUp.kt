@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.auth
 
 class signUp : AppCompatActivity() {
@@ -28,7 +29,6 @@ class signUp : AppCompatActivity() {
         //buttons
         val signUp = findViewById<Button>(R.id.signUpButton)
         val login = findViewById<TextView>(R.id.login)
-
         val bck=findViewById<ImageView>(R.id.arrowbackLogin)
 
         bck.setOnClickListener {
@@ -66,6 +66,19 @@ class signUp : AppCompatActivity() {
                             "Authentication failed: ${task.exception?.message}",
                             Toast.LENGTH_SHORT
                         ).show()
+                    }
+                }
+
+           //get the now currently signed user and update their profile details
+            val user=FirebaseAuth.getInstance().currentUser
+            val profileUpdate=UserProfileChangeRequest.Builder()
+                .setDisplayName(name.text.toString())
+                .build()
+            user?.updateProfile(profileUpdate)
+                ?.addOnCompleteListener { task ->
+                    if (task.isSuccessful){
+                        Toast.makeText(this,"Successfully added name",Toast.LENGTH_LONG).show()
+
                     }
                 }
         }
