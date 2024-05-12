@@ -7,6 +7,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import com.google.firebase.auth.FirebaseAuth
 
 class profilePage : AppCompatActivity() {
@@ -35,6 +38,12 @@ class profilePage : AppCompatActivity() {
 
         //buttons that can be clicked below
 
+        lgout2.setOnClickListener {
+            auth.signOut()
+            intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+
         editpfp.setOnClickListener {
             intent= Intent(this,taskslist::class.java)
             startActivity(intent)
@@ -59,35 +68,38 @@ class profilePage : AppCompatActivity() {
             intent= Intent(this,Notes::class.java)
             startActivity(intent)
         }
-        lgout2.setOnClickListener {
-            intent= Intent(this,MainActivity::class.java)
-            startActivity(intent)
-        }
+
 
     }
 
     private fun fetchUserDataAndSetDisplayName(nameTextView: TextView) {
         val currentUser = auth.currentUser
+        val userid=currentUser?.uid
 
+        val url = "http://192.168.18.14/zenagenda/v1/getuid.php?userid=$userid"
 
+        // Create a JSON request using Volley
+        val jsonObjectRequest = JsonObjectRequest(
+            Request.Method.GET, url, null,
+            { response ->
+                // Parse the JSON response
+                val name = response.getString("name")
 
-        // Check if the user is signed in
-        currentUser?.let { user ->
-            // Fetch user data from Firebase Authentication
-            user.reload().addOnSuccessListener {
-                // Get the refreshed user instance
-                val refreshedUser = auth.currentUser
-
-                // Get the display name of the user
-                val displayName = refreshedUser?.displayName
-
-                // Update the TextView with the display name
-                nameTextView.text = displayName ?: "Display Name Not Set"
-            }.addOnFailureListener { exception ->
-                // Handle failure to refresh user data
-                exception.printStackTrace()
+                // Set the name in the TextView
+                nameTextView.text = name
+            },
+            { error ->
+                // Handle errors
+                Toast.makeText(this, "Error fetching user data: ${error.message}", Toast.LENGTH_SHORT).show()
             }
+        )
+
+        // Add the request to the Volley request queue
+        Volley.newRequestQueue(this).add(jsonObjectRequest)
+
+
+
         }
     }
-}
+
 

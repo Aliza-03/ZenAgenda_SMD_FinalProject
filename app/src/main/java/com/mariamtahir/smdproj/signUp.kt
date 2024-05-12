@@ -11,10 +11,14 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.auth
+import java.net.URLEncoder
 
 class signUp : AppCompatActivity() {
     lateinit var auth:FirebaseAuth
@@ -58,6 +62,39 @@ class signUp : AppCompatActivity() {
                         // Once signup is successful, navigate to the profile page
                         val intent = Intent(this, profilePage::class.java)
                         startActivity(intent)
+
+                        //---------------------------------------------------------------------
+                        // Encode the username to handle special characters
+                        val uname = name.text.toString()
+                        val userid = user?.uid
+
+                        val encodedUname = URLEncoder.encode(uname, "UTF-8")
+                        val url = "http://192.168.18.14/zenagenda/v1/entername.php"
+
+                        // Create a request to update the user's name
+                        val request = object : StringRequest(
+                            Method.POST, url,
+                            Response.Listener { response ->
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Name updated successfully",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            },
+                            Response.ErrorListener { error ->
+
+                                val responseCode = error.networkResponse?.statusCode
+                                if (responseCode != null) {
+                                    // Log or handle the response code
+                                    Log.d("Response Code", "Error Response Code: $responseCode")
+
+                                }
+                            }){}
+
+                        Volley.newRequestQueue(this).add(request)
+
+                        // Add the request to the request queue
+
                     } else {
                         // If sign up fails, display a message to the user.
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -67,22 +104,11 @@ class signUp : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                 }
 
-           //get the now currently signed user and update their profile details
-            val user=FirebaseAuth.getInstance().currentUser
-            val profileUpdate=UserProfileChangeRequest.Builder()
-                .setDisplayName(name.text.toString())
-                .build()
-            user?.updateProfile(profileUpdate)
-                ?.addOnCompleteListener { task ->
-                    if (task.isSuccessful){
-                        Toast.makeText(this,"Successfully added name",Toast.LENGTH_LONG).show()
 
-                    }
-                }
         }
-
 
         login.setOnClickListener {
             val intent = Intent(this, login::class.java)

@@ -14,9 +14,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.firebase.auth.FirebaseAuth
 
+
 class CoverPage : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        CacheManager.clearCache(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cover_page)
 
@@ -67,6 +70,10 @@ class CoverPage : AppCompatActivity() {
                         // Once login is successful, navigate to the profile page
                         val intent = Intent(this, profilePage::class.java)
                         startActivity(intent)
+                        val currentUser = user?.uid
+                        //getting current user and its respective id
+                        Toast.makeText(this,"$currentUser",Toast.LENGTH_LONG).show()
+
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
@@ -78,11 +85,9 @@ class CoverPage : AppCompatActivity() {
                     }
                 }
 
-            //getting current user and its respective id
-            val currentUser = auth.currentUser
-            val userID= currentUser?.uid     //user id
 
-            Toast.makeText(this,"$userID",Toast.LENGTH_LONG).show()
+
+
         }
 
         sign.setOnClickListener {

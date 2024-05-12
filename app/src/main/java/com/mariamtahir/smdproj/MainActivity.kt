@@ -10,8 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
+        CacheManager.clearCache(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
