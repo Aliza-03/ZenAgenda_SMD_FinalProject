@@ -4,7 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class TeamSpace : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -15,6 +18,9 @@ class TeamSpace : AppCompatActivity() {
         val chatButton = findViewById<ImageView>(R.id.chat)
         val home=findViewById<ImageView>(R.id.home)
         val note=findViewById<ImageView>(R.id.gallery)
+        //-------------------------------------------------------------------
+
+        //---------------------------------------------------------------------------
         chatButton.setOnClickListener {
             val intent = Intent(this, Chats::class.java)
             startActivity(intent)
