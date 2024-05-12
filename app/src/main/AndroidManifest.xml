@@ -34,7 +34,7 @@
             android:exported="false"
             tools:ignore="DuplicateActivity" />
         <activity
-            android:name=".NotePageactivity"
+            android:name=".NotePageActivity"
             android:exported="false" />
         <activity
             android:name=".taskslist"
