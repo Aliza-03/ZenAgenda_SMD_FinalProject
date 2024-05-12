@@ -1,8 +1,11 @@
 package com.mariamtahir.smdproj
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -10,13 +13,21 @@ import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import de.hdodenhof.circleimageview.CircleImageView
 
 class profilePage : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_page)
+
 
         val editpfp=findViewById<ImageView>(R.id.editProfilePhoto1)
         val pomo=findViewById<Button>(R.id.pomodoro)
@@ -24,11 +35,30 @@ class profilePage : AppCompatActivity() {
         val colab=findViewById<Button>(R.id.collabButton)
         val note=findViewById<Button>(R.id.note)
         val lgout2=findViewById<ImageView>(R.id.arrowBack)
+        val pfp=findViewById<CircleImageView>(R.id.profilePhoto)
 
         //user profile variables
         auth = FirebaseAuth.getInstance()
         val uname=findViewById<TextView>(R.id.name)
         val currentUser = auth.currentUser
+
+
+        //loading the pfp
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        val databaseRef = FirebaseDatabase.getInstance().reference.child("users").child(userId ?: "")
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val profilePictureUrl = snapshot.child("profilePictureUrl").value.toString()
+                // Load the profile picture using Glide or Picasso
+                Glide.with(this@profilePage)
+                    .load(profilePictureUrl)
+                    .into(pfp)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Handle onCancelled
+            }
+        })
 
 
 
@@ -38,6 +68,8 @@ class profilePage : AppCompatActivity() {
 
         //buttons that can be clicked below
 
+        editpfp
+
         lgout2.setOnClickListener {
             auth.signOut()
             intent= Intent(this,MainActivity::class.java)
@@ -45,7 +77,7 @@ class profilePage : AppCompatActivity() {
         }
 
         editpfp.setOnClickListener {
-            intent= Intent(this,taskslist::class.java)
+            intent= Intent(this,profileCustomize::class.java)
             startActivity(intent)
         }
 
@@ -100,6 +132,12 @@ class profilePage : AppCompatActivity() {
 
 
         }
-    }
+
+
+
+
+
+
+}
 
 
