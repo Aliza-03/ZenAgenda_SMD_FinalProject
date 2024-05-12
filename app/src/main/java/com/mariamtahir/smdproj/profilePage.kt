@@ -32,8 +32,8 @@ class profilePage : AppCompatActivity() {
         val editpfp=findViewById<ImageView>(R.id.editProfilePhoto1)
         val pomo=findViewById<Button>(R.id.pomodoro)
         val tasklist=findViewById<Button>(R.id.tasksButton)
-        val colab=findViewById<Button>(R.id.collabButton)
         val note=findViewById<Button>(R.id.note)
+        val colab=findViewById<Button>(R.id.collabButton)
         val lgout2=findViewById<ImageView>(R.id.arrowBack)
         val pfp=findViewById<CircleImageView>(R.id.profilePhoto)
 

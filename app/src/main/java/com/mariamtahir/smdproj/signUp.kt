@@ -1,5 +1,6 @@
 package com.mariamtahir.smdproj
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
@@ -22,6 +23,7 @@ import java.net.URLEncoder
 
 class signUp : AppCompatActivity() {
     lateinit var auth:FirebaseAuth
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -34,6 +36,15 @@ class signUp : AppCompatActivity() {
         val signUp = findViewById<Button>(R.id.signUpButton)
         val login = findViewById<TextView>(R.id.login)
         val bck=findViewById<ImageView>(R.id.arrowbackLogin)
+
+        //Guest
+        val guest_=findViewById<TextView>(R.id.guest)
+
+        guest_.setOnClickListener {
+
+            intent=Intent(this,GuestDashboard::class.java)
+            startActivity(intent)
+        }
 
         bck.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
