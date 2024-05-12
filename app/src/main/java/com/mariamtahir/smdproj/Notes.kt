@@ -16,7 +16,7 @@ class Notes : AppCompatActivity() {
         val chatButton = findViewById<ImageView>(R.id.chat_)
         val note1=findViewById<TextView>(R.id.firstnote)
         val home=findViewById<ImageView>(R.id.home_)
-        val addnote=findViewById<ImageView>(R.id.add_note_btn)
+        val addnote=findViewById<ImageView>(R.id.addnotebutton)
 
 
         addnote.setOnClickListener {

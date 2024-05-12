@@ -31,21 +31,23 @@
                     android:fontFamily="@font/playfair_display"
                     android:textSize="50sp"
                     android:padding="20dp"
-                    ></TextView>
+                    />
 
-                <ImageView
+                <ImageButton
                     android:layout_width="43dp"
                     android:layout_height="36dp"
                     android:layout_gravity="center"
-                    android:id="@+id/add_note_btn"
-                    android:src="@drawable/add"></ImageView>
+                    android:id="@+id/addnotebutton"
+                    android:src="@drawable/add"
+                    android:background="@color/peachie_lite"
+                    />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="575dp"
                 android:orientation="horizontal"
-
                 >
 
                 <LinearLayout
@@ -55,7 +57,6 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="5dp"
-
                     >
 
                     <TextView
@@ -66,10 +67,9 @@
                         android:layout_weight="1"
                         android:background="@drawable/brown_roundbox"
                         android:padding="10dp"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar vestibulum erat,
-"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar vestibulum erat,"
                         android:textColor="@color/white"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="20sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -78,13 +78,9 @@
                         android:layout_weight="1"
                         android:background="@drawable/fern_roundbox"
                         android:padding="10dp"
-                        android:text="Lorem ipsum dolor sit amet,
- consectetur adipiscing
- Lorem ipsum dolor sit amet,
- consectetur adipiscing
-"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing"
                         android:textColor="@color/white"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="20sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -93,12 +89,9 @@
                         android:layout_weight="0.7"
                         android:background="@drawable/mossgreen_box"
                         android:padding="10dp"
-                        android:text="Lorem ipsum dolor sit amet,
- consectetur adipiscing
-
-"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
                         android:textColor="@color/white"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="20sp"/>
 
 
                 </LinearLayout>
@@ -118,11 +111,9 @@
                         android:layout_weight="2"
                         android:background="@drawable/mossgreen_box"
                         android:padding="10dp"
-                        android:text="Lorem ipsum dolor sit amet,
- consectetur adipiscing
-"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing"
                         android:textColor="@color/white"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="20sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
