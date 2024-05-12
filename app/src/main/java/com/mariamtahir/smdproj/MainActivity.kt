@@ -10,8 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
+        CacheManager.clearCache(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -26,14 +28,20 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
-                    finish() // Close the splash screen activity
+                    finish()
                 }
             }
         }
         splashScreenTimer.start()
+//---------------------------------------------------------------------------------------
 
+
+
+// Declaration of variables from layout
         val textclick=findViewById<TextView>(R.id.textclick)
 
+
+        // ON CLICK LISTENER CODES
         textclick.setOnClickListener {
             intent=Intent(this,CoverPage::class.java)
             startActivity(intent)
