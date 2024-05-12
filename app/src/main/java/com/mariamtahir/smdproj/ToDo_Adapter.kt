@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ToDo_Adapter(private val todo_tasks:MutableList<ToDo_Data>) :
+class ToDo_Adapter(private val todo_tasks:MutableList<String>) :
     RecyclerView.Adapter<ToDo_Adapter.TaskViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -24,7 +24,7 @@ class ToDo_Adapter(private val todo_tasks:MutableList<ToDo_Data>) :
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val currentItem=todo_tasks[position]
        // holder.check_btn.setImageResource(currentItem.)
-        holder.task_.text=currentItem.task
+        holder.task_.text=currentItem
     }
 
     //------------------------------------------------------------------------------------------------------------------
