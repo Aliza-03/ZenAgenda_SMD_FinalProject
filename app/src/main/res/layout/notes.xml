@@ -16,6 +16,16 @@
         android:backgroundTint="#495235"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <ImageButton
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFE0"
+        android:id="@+id/savenotebutton"
+        />
 
     <EditText
         android:id="@+id/title"
@@ -58,6 +68,7 @@
         android:layout_below="@id/noteet"
         >
         <ImageView
+            android:id="@+id/imagecontainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_square_24"
@@ -81,7 +92,7 @@
         >
 
         <ImageButton
-            android:id="@+id/addButton"
+            android:id="@+id/addImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
