@@ -1,5 +1,6 @@
 package com.mariamtahir.smdproj
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class ProjectSpace_Adapter(private val proj_list:MutableList<Project_data>):
@@ -47,6 +49,11 @@ RecyclerView.Adapter<ProjectSpace_Adapter.ProjectViewHolder>(){
         }
        // holder.itemView.background.setTint(backgroundColor)
         holder.card.setCardBackgroundColor(backgroundColor)
+        holder.editbtn.setOnClickListener {
+
+            val intent = Intent(holder.itemView.context, TeamSpace::class.java)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
 
@@ -56,7 +63,7 @@ RecyclerView.Adapter<ProjectSpace_Adapter.ProjectViewHolder>(){
        // val status_text:TextView=projview.findViewById(R.id.st1)
         val status_:TextView=projview.findViewById(R.id.st2)
         val card: CardView=projview.findViewById(R.id.card)
-      //  val editbtn: ImageView =projview.findViewById(R.id.edit)
+        val editbtn: ImageView =projview.findViewById(R.id.edit)
 
     }
 }
