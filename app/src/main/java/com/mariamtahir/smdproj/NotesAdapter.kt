@@ -29,11 +29,14 @@ class NotesAdapter : ListAdapter<Note, NotesAdapter.NoteViewHolder>(NoteDiffCall
             val intent = Intent(context, NotePageActivity::class.java).apply {
                 putExtra("title", note.title)
                 putExtra("content", note.content)
-                putExtra("imageUri", note.imageUri?.toString()) // Convert Uri to string
+
             }
             context.startActivity(intent)
         }
+
+
     }
+
     class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val noteTitle: TextView = itemView.findViewById(R.id.notetitle)
         private val noteContent: TextView = itemView.findViewById(R.id.notecontent)

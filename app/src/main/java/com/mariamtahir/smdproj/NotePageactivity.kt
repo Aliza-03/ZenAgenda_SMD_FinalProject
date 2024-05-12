@@ -32,7 +32,6 @@ class NotePageActivity : AppCompatActivity() {
         dbHelper = DatabaseHelper(this)
         val title = intent.getStringExtra("title")
         val content = intent.getStringExtra("content")
-        val imageUriString = intent.getStringExtra("imageUri")
        // val imageUri: Uri? = imageUriString?.let { Uri.parse(it) }
 
         val noteTitleEditText = findViewById<EditText>(R.id.title)
@@ -43,10 +42,8 @@ class NotePageActivity : AppCompatActivity() {
 
         noteTitleEditText.text = Editable.Factory.getInstance().newEditable(title ?: "")
         noteContentEditText.text = Editable.Factory.getInstance().newEditable(content ?: "")
-        //selectedImageUri = imageUri
-        Glide.with(this)
-            .load(imageUriString)
-            .into(imageView)
+        searchNoteAndDisplayImage(title)
+
 
 
         addImageButton.setOnClickListener {
@@ -117,6 +114,46 @@ class NotePageActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+    }
+    private fun searchNoteAndDisplayImage(title: String?) {
+        if (title.isNullOrEmpty()) {
+            // Title is null or empty, cannot search for the note
+            return
+        }
+
+        // Assuming each user has a collection named after their UID under "users"
+        val currentUser = auth.currentUser
+        currentUser?.let { user ->
+            val userNotesCollection = firestore.collection("users").document(user.uid)
+                .collection("notes")
+
+            // Query the user's notes collection for the note with the given title
+            userNotesCollection.whereEqualTo("title", title)
+                .get()
+                .addOnSuccessListener { documents ->
+                    if (!documents.isEmpty) {
+                        // Note found, get the first document
+                        val noteDocument = documents.first()
+
+                        // Check if the document has an image URL
+                        val imageUrl = noteDocument.getString("imageUri")
+
+                        // Load and display the image if URL is not null or empty
+                        if (!imageUrl.isNullOrEmpty()) {
+                            Glide.with(this@NotePageActivity)
+                                .load(Uri.parse(imageUrl))
+                                .into(imageView)
+                        }
+                    } else {
+                        // Note not found
+                        //Log.d("TAG", "No such note")
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    // Error occurred while fetching the note
+                    //Log.d("TAG", "Error getting note: $exception")
+                }
+        }
     }
 
     private fun saveNoteToSQLite(title: String, content: String) {
