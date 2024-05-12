@@ -118,7 +118,8 @@ class PomodoroTimer : AppCompatActivity() {
     private fun setAlarmForBreak() {
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val alarmIntent = Intent(this, AlarmReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0)
+        val pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent,
+            PendingIntent.FLAG_IMMUTABLE)
 
         val calendar: Calendar = Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()
