@@ -7,7 +7,7 @@
     android:id="@+id/constraint_parent"
     tools:context=".TeamSpace"
     android:background="@color/peachie_lite">
-    <!--During backend implementation this will contain the user's project name-->
+
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -18,10 +18,12 @@
         app:layout_constraintTop_toTopOf="@id/constraint_parent"
 
         >
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SMD Project"
+            android:text="Project Tasks"
             android:textSize="35sp"
             android:textColor="@color/white"
             android:layout_gravity="center_vertical"
@@ -56,192 +58,47 @@
                     android:id="@+id/todo"
                     ></TextView>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleX="1.2"
-                    android:scaleY="1.2"
-                    android:layout_toEndOf="@id/todo"
-                    android:src="@drawable/add"
-                    android:layout_marginTop="10dp"
-                    android:paddingLeft="12dp"
-                    ></ImageView>
+
             </RelativeLayout>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/brown_sugar"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@id/r1"
-                android:id="@+id/c1"
-                >
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  Implement Code"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/brown_sugar"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@id/c1"
-                android:id="@+id/c2"
-                >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  Make database"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-            </com.google.android.material.card.MaterialCardView>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/r2"
-                android:layout_below="@id/c2"
-
-                >
-
-                <TextView
-                    android:id="@+id/doing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:fontFamily="@font/playfair_display"
-                    android:text="Doing :"
-                    android:textSize="30sp"></TextView>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@id/doing"
-                    android:paddingLeft="12dp"
-                    android:scaleX="1.2"
-                    android:scaleY="1.2"
-                    android:src="@drawable/add"></ImageView>
-            </RelativeLayout>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/orange"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@id/r2"
-                android:id="@+id/c3"
-                >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  Code xml"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-            </com.google.android.material.card.MaterialCardView>
 
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/r3"
-                android:layout_below="@id/c3"
+                android:id="@+id/r2"
+
 
                 >
 
-                <TextView
-                    android:id="@+id/done"
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:fontFamily="@font/playfair_display"
-                    android:text="Done  :"
-                    android:textSize="30sp"></TextView>
+                    android:id="@+id/teamspace_rview"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="50dp"
+                    ></androidx.recyclerview.widget.RecyclerView>
 
-                <ImageView
+
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@id/done"
-                    android:paddingLeft="12dp"
-                    android:scaleX="1.2"
-                    android:scaleY="1.2"
-                    android:src="@drawable/add"></ImageView>
+                    android:id="@+id/add_task_button"
+                    android:layout_below="@id/teamspace_rview"
+                    android:text="Add"
+                    android:textColor="@color/peachie_lite"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                ></Button>
             </RelativeLayout>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/moss"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@id/r3"
-                android:id="@+id/c4"
-                >
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  Make figma board"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-            </com.google.android.material.card.MaterialCardView>
+
+
+
 
 
         </RelativeLayout>

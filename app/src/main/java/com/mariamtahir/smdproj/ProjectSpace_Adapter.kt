@@ -33,6 +33,7 @@ RecyclerView.Adapter<ProjectSpace_Adapter.ProjectViewHolder>(){
 
     override fun onBindViewHolder(holder: ProjectViewHolder, position: Int) {
         val currentItem=proj_list[position]
+        val projectName = holder.projname.text.toString()
 
         holder.projname.text=currentItem.projectname
         holder.status_.text=currentItem.status
@@ -52,6 +53,7 @@ RecyclerView.Adapter<ProjectSpace_Adapter.ProjectViewHolder>(){
         holder.editbtn.setOnClickListener {
 
             val intent = Intent(holder.itemView.context, TeamSpace::class.java)
+          //  intent.putExtra("project_name",projectName)
             holder.itemView.context.startActivity(intent)
         }
     }
@@ -67,3 +69,4 @@ RecyclerView.Adapter<ProjectSpace_Adapter.ProjectViewHolder>(){
 
     }
 }
+
