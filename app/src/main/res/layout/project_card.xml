@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="280dp"
+        android:layout_height="90dp"
+        android:backgroundTint="@color/brown_sugar"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/card"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="120dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:id="@+id/edit"
+            android:src="@drawable/edit"></ImageView>
+
+        <TextView
+            android:id="@+id/projnme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="  SMD Project"
+            android:paddingBottom="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:id="@+id/st1"
+            android:text="   Status: "
+            android:textSize="20sp"
+            android:textColor="@color/white"></TextView>
+
+        <TextView
+            android:id="@+id/st2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="90dp"
+            android:background="@color/brown_sugar_highlight"
+            android:text="  In Progress   "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck"></TextView>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

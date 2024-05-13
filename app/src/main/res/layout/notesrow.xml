@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="@color/peachie_lite"
+
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        android:padding="20dp"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/moss"
         >
         <TextView
             android:id="@+id/notetitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/peachie_lite"
             android:text="note title"
+            android:padding="5dp"
+            android:textSize="30sp"
             />
         <TextView
 
@@ -18,11 +35,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/notecontent"
             android:text="note content"
+            android:padding="5dp"
+            android:textColor="@color/peachie_lite"
             android:layout_below="@+id/notetitle"
+            android:paddingTop="20dp"
+            android:textSize="20sp"
             />
 
     </RelativeLayout>
 
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

@@ -17,6 +17,8 @@
         app:layout_constraintStart_toStartOf="@id/project_parent"
         app:layout_constraintTop_toTopOf="@id/project_parent"
 
+
+
         >
         <TextView
             android:layout_width="wrap_content"
@@ -26,6 +28,15 @@
             android:textColor="@color/white"
             android:layout_gravity="center_vertical"
             ></TextView>
+
+        <ImageView
+            android:id="@+id/add_project_btn"
+            android:layout_width="89dp"
+            android:layout_height="68dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:paddingRight="50dp"
+            android:src="@drawable/add"></ImageView>
     </androidx.appcompat.widget.Toolbar>
     <ScrollView
         android:layout_width="0dp"
@@ -37,186 +48,24 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="40dp">
 
 
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="90dp"
-                android:backgroundTint="@color/brown_sugar"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/cc1"
-                >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  SMD Project"
-                    android:paddingBottom="20dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:id="@+id/st1"
-                    android:text="   Status: "
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-
-                <TextView
-                    android:id="@+id/st2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="90dp"
-                    android:background="@color/brown_sugar_highlight"
-                    android:text="  In Progress   "
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    tools:ignore="TextContrastCheck"></TextView>
-            </com.google.android.material.card.MaterialCardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/proj_card_rview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"></androidx.recyclerview.widget.RecyclerView>
 
 
 
 
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="90dp"
-                android:backgroundTint="@color/orange"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@id/cc1"
-                android:id="@+id/cc2"
-                >
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  SMD Project"
-                    android:paddingBottom="20dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:id="@+id/st3"
-                    android:text="   Status: "
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-
-                <TextView
-                    android:id="@+id/st4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="90dp"
-                    android:background="@color/orange_highlight"
-                    android:text="  In Progress   "
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    tools:ignore="TextContrastCheck"></TextView>
-            </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="280dp"
-                android:layout_height="90dp"
-                android:backgroundTint="@color/moss"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="160dp"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@id/cc1"
-                android:id="@+id/cc3"
-                >
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="120dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:src="@drawable/edit"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  SMD Project"
-                    android:paddingBottom="20dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:id="@+id/st5"
-                    android:text="   Status: "
-                    android:textSize="20sp"
-                    android:textColor="@color/white"></TextView>
-
-                <TextView
-                    android:id="@+id/st6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="90dp"
-                    android:text="  In Progress   "
-                    android:background="@drawable/green_roundedtext"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"></TextView>
-            </com.google.android.material.card.MaterialCardView>
-
-            <ImageView
-                android:id="@+id/add_project_btn"
-                android:layout_width="89dp"
-                android:layout_height="68dp"
-                android:layout_below="@id/cc3"
-
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="-18dp"
-                android:layout_toRightOf="@id/cc2"
-                android:paddingRight="50dp"
-                android:src="@drawable/add"></ImageView>
 
         </RelativeLayout>
+
 
     </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView

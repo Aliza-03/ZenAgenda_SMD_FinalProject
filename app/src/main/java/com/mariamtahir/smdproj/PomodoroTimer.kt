@@ -56,8 +56,8 @@ class PomodoroTimer : AppCompatActivity() {
         //timer functionalities
         playbtn.setOnClickListener {
 
-            //startPomodoroTimer(25 * 60 * 1000)
-            startPomodoroTimer(60*1000)
+            startPomodoroTimer(25 * 60 * 1000)
+           // startPomodoroTimer(60*1000)
         }
 
         pausebtn.setOnClickListener {
