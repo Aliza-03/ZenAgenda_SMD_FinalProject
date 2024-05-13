@@ -29,6 +29,7 @@
                     android:layout_height="wrap_content"
                     android:text="Notes"
                     android:fontFamily="@font/playfair_display"
+                    android:textColor="@color/fern"
                     android:textSize="50sp"
                     android:padding="20dp"
                     />
