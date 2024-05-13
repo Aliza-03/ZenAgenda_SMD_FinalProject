@@ -5,8 +5,12 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.EditorInfo
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,11 +19,12 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Notes : AppCompatActivity() {
-
+    private lateinit var searchEdittext: EditText
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
     private lateinit var notesRecyclerView: RecyclerView
     private lateinit var notesAdapter: NotesAdapter
+    private lateinit var searchButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +32,14 @@ class Notes : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
+        searchEdittext = findViewById<EditText>(R.id.searchnotes)
+        searchButton=findViewById<Button>(R.id.searchbutton)
 
         val chatButton = findViewById<ImageView>(R.id.chat_)
         val home = findViewById<ImageView>(R.id.home_)
         val addNoteButton = findViewById<ImageView>(R.id.addnotebutton)
+
+
 
         addNoteButton.setOnClickListener {
             val intent = Intent(this, NotePageActivity::class.java)
@@ -46,12 +55,23 @@ class Notes : AppCompatActivity() {
             val intent = Intent(this, profilePage::class.java)
             startActivity(intent)
         }
+        searchButton.setOnClickListener {
+            val query = searchEdittext.text.toString()
+            if (query.isNotBlank()) {
+                navigateToSearchPage(query)
+            } else {
+                // Handle empty search query
+                Toast.makeText(this@Notes, "Please enter a search query", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         notesRecyclerView = findViewById(R.id.noteslistrv)
         notesAdapter = NotesAdapter()
 
         notesRecyclerView.layoutManager = LinearLayoutManager(this)
         notesRecyclerView.adapter = notesAdapter
+
+
 
         // Move loadNotes() call here
         loadNotes()
@@ -114,6 +134,12 @@ class Notes : AppCompatActivity() {
             val notesList = dbHelper.getAllNotes(this)
             notesAdapter.submitList(notesList)
         }
+    }
+    private fun navigateToSearchPage(query: String) {
+        // Navigate to the SearchPageActivity
+        val intent = Intent(this, SearchPageActivity::class.java)
+        intent.putExtra("query", query) // Pass the search query to the next activity
+        startActivity(intent)
     }
 
 }

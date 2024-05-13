@@ -34,6 +34,14 @@
             android:name=".taskslist"
             android:exported="false" />
         <activity
+            android:name=".SearchPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchAdapter"
+            android:exported="false" />
+
+
+        <activity
             android:name=".taskSearch"
             android:exported="false" />
         <activity

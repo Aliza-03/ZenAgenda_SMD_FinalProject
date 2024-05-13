@@ -72,6 +72,8 @@ class NotePageActivity : AppCompatActivity() {
             }
         }
 
+
+
         // Load the image using Glide
         Glide.with(this)
             .load(selectedImageUri)
@@ -149,10 +151,12 @@ class NotePageActivity : AppCompatActivity() {
                         //Log.d("TAG", "No such note")
                     }
                 }
+
                 .addOnFailureListener { exception ->
                     // Error occurred while fetching the note
                     //Log.d("TAG", "Error getting note: $exception")
                 }
+
         }
     }
 

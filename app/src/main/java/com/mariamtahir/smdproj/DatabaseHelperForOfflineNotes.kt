@@ -57,28 +57,35 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     fun getAllNotes(context: Context): List<Note> {
         val notesList = mutableListOf<Note>()
         val db = this.readableDatabase
-        val cursor: Cursor? = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
-        cursor?.use {
-            val titleIndex = it.getColumnIndex(COL_TITLE)
-            val contentIndex = it.getColumnIndex(COL_CONTENT)
-            val imageUriIndex = it.getColumnIndex(COL_IMAGE_URI)
-            if (titleIndex == -1 || contentIndex == -1 || imageUriIndex == -1) {
-                // Handle error: One or more column indices not found
-                return notesList
-            }
-            if (it.moveToFirst()) {
-                do {
-                    val title = it.getString(titleIndex)
-                    val content = it.getString(contentIndex)
-                    val imageUriString = it.getString(imageUriIndex)
-                    val imageUri = Uri.parse(imageUriString)
-                    val note = Note(title, content, imageUri)
-                    notesList.add(note)
-                } while (it.moveToNext())
+
+        val cursor = db.query(
+            TABLE_NAME,
+            arrayOf(COL_ID, COL_TITLE, COL_CONTENT, COL_IMAGE_URI),
+            null,
+            null,
+            null,
+            null,
+            null
+        )
+
+        with(cursor) {
+            while (moveToNext()) {
+                val id = getInt(getColumnIndexOrThrow(COL_ID))
+                val title = getString(getColumnIndexOrThrow(COL_TITLE))
+                val content = getString(getColumnIndexOrThrow(COL_CONTENT))
+                val imageUriString = getString(getColumnIndexOrThrow(COL_IMAGE_URI))
+                val imageUri = if (imageUriString != null) Uri.parse(imageUriString) else null
+
+                val note = Note(title, content, imageUri)
+                notesList.add(note)
             }
         }
+
+        cursor.close()
         return notesList
     }
+
+
 
     fun saveImageUriToSQLite(imageUri: String, noteTitle: String, context: Context) {
         val db = this.writableDatabase
